@@ -39,9 +39,9 @@ def cleanQuery(keywords):
   keywords = keywords.translate(str.maketrans('', '',punctuation))
   return keywords, stringQuery
 
-def processInput():
-  keyword= input("Search ")
-  keyword, stringQuery= cleanQuery(keyword)
+def processInput(query):
+
+  keyword, stringQuery= cleanQuery(query)
   return keyword.split(), stringQuery
 
   
