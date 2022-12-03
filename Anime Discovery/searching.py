@@ -23,22 +23,22 @@ def main(query):
      
     if stringQuery!= None or stringQuery != " ":
           # filter through anime datf
-      queryList = filterWithQuery(dfProcess.anime_df,getQuery)
+      queryList = filterWithQuery(dfProcess.useanime,getQuery)
       
 
       topResult= getTopResult(queryList, getQuery)
       filter.results={topResult[0]:12}
-    genre= filterGetAnimGenre(dfProcess.anime_df, 'Name lowercase',topResult[0])
+    genre= filterGetAnimGenre(dfProcess.useanime, 'Name lowercase',topResult[0])
     genresSelected(genre[0])  #Aisha main output put here as input
     ranking= sortByRatings()
-    return ranking
+    
+    return ranking.keys()
     
     # else:
   except:
     print("anime not available, please go back and try again")
-    ranking= main()
-    return ranking
-
+    # ranking= main(query)
+    # return ranking
 
 
 

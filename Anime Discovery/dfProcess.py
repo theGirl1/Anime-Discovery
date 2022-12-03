@@ -3,14 +3,15 @@ import os
 
 current= os. getcwd()
 
-mainDF=pd.read_csv(current+"/Data/anime.csv")
+mainDF=pd.read_csv("Anime Discovery/Data/anime.csv")
+newanime= "Anime Discovery/Data/animeProcessed.csv"
 # df list needed
-
+useanime= pd.read_csv("Anime Discovery/Data/animeProcessed.csv")
 
 def processAnime(df):
     # make this a pre process function
     # making a new dataframe where names are in lowercase
-    df = pd.read_csv(current+"/Data/anime.csv")
+    # df = pd.read_csv(current+"/Data/anime.csv")
 
     # pd.set_option('display.max_rows', None)
     df.head()
@@ -30,4 +31,6 @@ def processAnime(df):
     return df
 
 anime_df = processAnime(mainDF)
+
+anime_df.to_csv(newanime, index= False, header=anime_df.columns.values)
 

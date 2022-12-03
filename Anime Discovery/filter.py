@@ -91,6 +91,6 @@ def genresSelected(query):
 # filter based on ratings, create 3 dataframes based on high, mid, low rating, sort within dataframe
 def sortByRatings():
   rank= sorted(results.items(), key=lambda x:x[1],reverse=True)
-  return rank
+  return dict(rank)
 
 resultNum= len(results)
