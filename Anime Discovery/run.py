@@ -5,10 +5,6 @@ import searching
 app = Flask(__name__)
 
 @app.route("/")
-
-# def index():  
-#     return "hello woorld"
-
 def index():
     # anime= main.main()
     return render_template("index.html")
@@ -22,6 +18,11 @@ def verify():
         # comple search operation here
         return redirect(f"/Results/{name}")
 
+@app.route('/verify2', methods = ['POST', 'GET'])
+def verify2():
+    if request.method == 'POST':
+        # comple search operation here
+        return redirect(f"/")
 
 @app.route('/Results/<name>')
 def resultPage(name):
