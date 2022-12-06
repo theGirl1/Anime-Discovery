@@ -37,8 +37,10 @@ def main(query):
     # else:
   except:
     print("anime not available, please go back and try again")
-    # ranking= main(query)
-    # return ranking
+    return "anime not available, please go back and try again"
+
+
+
 
 
 
