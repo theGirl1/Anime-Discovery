@@ -13,7 +13,14 @@
      </div>
 
      <div>
-      {{ results }}
-      </div
+      <div class= "topResult">{{results[0]}}</div>
+      <ol>
+        <!-- For loop logic of jinja template -->
+        {%for i in range(0, len)%}
+          
+            <li>{{results[i]}}</li>
+        {%endfor%}
+        </ol>
+      </div>
   </body>
 </html>  

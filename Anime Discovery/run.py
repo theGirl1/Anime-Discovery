@@ -28,6 +28,6 @@ def verify2():
 def resultPage(name):
     
     anime= searching.main(name)
-    return render_template("Results.html", results=anime)
+    return render_template("Results.html",len = len(anime), results = anime)
 
 app.run(host="0.0.0.0", port=80)

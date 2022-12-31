@@ -32,15 +32,15 @@ def main(query):
     genresSelected(genre[0])  #Aisha main output put here as input
     ranking= sortByRatings()
     
-    return ranking.keys()
+    return list(ranking.keys())
     
     # else:
   except:
-    print("anime not available, please go back and try again")
-    return "anime not available, please go back and try again"
+    error=["anime not available, please go back and try again"]
+    return error
 
 
 
+# test= main("Naruto")
 
-
-
+# print(test)
